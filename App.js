@@ -27,8 +27,8 @@ class Blink extends Component {
 export default class BlinkApp extends React.Component {
   render() {
     return (
-      <View>
-        <Blink text='I love to blink' />
+      <View style={{alignItems: 'center', backgroundColor: 'yellow', marginTop: 50}}>
+        <Blink text='I love to blink2' />
         <Blink text='Blinking is fun' />
         <Blink text='Why not wink?' />
         <Blink text='Look at me wheee' />
