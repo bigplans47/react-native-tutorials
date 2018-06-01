@@ -1,27 +1,61 @@
-import React from 'react';
-import { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import { AppRegistry, Image } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Button, AppRegistry, Image } from 'react-native';
 
-class Greeting extends Component {
+class Blink extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isShowingText: true};
+
+    //toggle the state every second
+    setInterval(() => {
+      this.setState(previousState => {
+        return { isShowingText: !previousState.isShowingText };
+      });
+    }, 1000);
+  }
+
   render() {
+    let display = this.state.isShowingText ? this.props.text : ' ';
     return (
-      <Text> Hello {this.props.name}!</Text>
+      <Text>
+        {display}
+      </Text>
     );
   }
 }
 
-export default class LotsOfGreetings extends Component {
+export default class BlinkApp extends React.Component {
   render() {
     return (
-      <View style={{alignItems: 'center'}}>
-        <Greeting name='Rexxar' />
-        <Greeting name='Don' />
-        <Greeting name='Jizanthepus' />
+      <View>
+        <Blink text='I love to blink' />
+        <Blink text='Blinking is fun' />
+        <Blink text='Why not wink?' />
+        <Blink text='Look at me wheee' />
       </View>
     );
   }
 }
+
+// class Greeting extends Component {
+//   render() {
+//     return (
+//       <Text> Hello {this.props.name}!</Text>
+//     );
+//   }
+// }
+//
+// export default class LotsOfGreetings extends Component {
+//   render() {
+//     return (
+//       <View style={{alignItems: 'center'}}>
+//         <Greeting name='Rexxar' />
+//         <Greeting name='Don' />
+//         <Greeting name='Jizanthepus' />
+//       </View>
+//     );
+//   }
+// }
 
 
 
