@@ -1,17 +1,46 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button, AppRegistry, Image } from 'react-native';
 
-export default class FixedDimensionsBasics extends Component {
-  render() {
-    return (
-      <View style={{flex: 1}}>
-        <View style={{ flex: 1, backgroundColor: 'powderblue'}} />
-        <View style={{ flex: 2, backgroundColor: 'skyblue'}} />
-        <View style={{ flex: 3, backgroundColor: 'steelblue'}} />
-      </View>
-    );
-  }
-}
+// export default class JustifyContentBasics extends Component {
+//   render() {
+//     return (
+//       <View style={{
+//         flex: 1,
+//         flexDirection: 'column',
+//         justifyContent: 'space-between',
+//         alignItems: 'center',
+//       }}>
+//         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}/>
+//         <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+//         <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+//       </View>
+//     )
+//   }
+// }
+
+// export default class FixedDimensionsBasics extends Component {
+//   render() {
+//     return (
+//       <View style={{flex: 1, flexDirection: 'row'}}>
+//         <View style={{ width: 50, height: 50, backgroundColor: 'powderblue'}} />
+//         <View style={{ width: 50, height: 50, backgroundColor: 'skyblue'}} />
+//         <View style={{ width: 50, height: 50, backgroundColor: 'steelblue'}} />
+//       </View>
+//     );
+//   }
+// }
+
+// export default class FixedDimensionsBasics extends Component {
+//   render() {
+//     return (
+//       <View style={{flex: 1, flexDirection: 'row'}}>
+//         <View style={{ flex: 1, backgroundColor: 'powderblue'}} />
+//         <View style={{ flex: 2, backgroundColor: 'skyblue'}} />
+//         <View style={{ flex: 3, backgroundColor: 'steelblue'}} />
+//       </View>
+//     );
+//   }
+// }
 
 // export default class FixedDimensionsBasics extends Component {
 //   render() {
@@ -71,7 +100,7 @@ export default class FixedDimensionsBasics extends Component {
 //     );
 //   }
 // }
-//
+// //
 // export default class BlinkApp extends React.Component {
 //   render() {
 //     return (
