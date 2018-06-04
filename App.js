@@ -1,28 +1,96 @@
 import React, { Component } from 'react';
-import { Alert, ScrollView, AppRegistry, Platform, StyleSheet, Text, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback, View, Button, Image, TextInput, } from 'react-native';
+import { Alert, ScrollView, AppRegistry, Platform, StyleSheet, Text, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback, View, Button, Image, TextInput, FlatList } from 'react-native';
 
-export default class IScrollerDownAndWhatHappenedNextShockedMe extends Component {
+export default class FlatListBasics extends Component {
   render() {
-    let pic = {
-      uri: 'http://natureandnutrition.com/wp-content/uploads/2015/04/Health-Benefits-of-Bananas-600x600.jpg'
-    };
-    let pic2 = {
-      uri: 'https://www.peta.org/wp-content/uploads/2015/09/Macaca_nigra_self-portrait-768x1063.jpg'
-    };
     return (
-      <ScrollView>
-        <Text style={{fontSize:96}}>Scroll me plz</Text>
-        <Image source={pic} style={{width: 193, height: 150}}/>
-        <Text style={{fontSize: 96}}>If you like</Text>
-        <Text style={{fontSize: 96}}>Scrolling down</Text>
-        <Text style={{fontSize:96}}>What's the best</Text>
-        <Text style={{fontSize:96}}>Framework around?</Text>
-        <Image source={pic2} style={{width: 193, height: 150}} />
-        <Text style={{fontSize:80}}>React Native</Text>
-      </ScrollView>
+      <View style={styles.container}>
+        <FlatList data={[
+          {key: 'Dan'},
+          {key: 'Ron'},
+          {key: 'Trixy'},
+          {key: 'Misty'},
+          {key: 'James'},
+          {key: 'Joel'},
+          {key: 'John'},
+          {key: 'Jillian'},
+          {key: 'Jimmy'},
+          {key: 'Julie'},
+          {key: 'Trixy'},
+          {key: 'Misty'},
+          {key: 'James'},
+          {key: 'Joel'},
+          {key: 'John'},
+          {key: 'Jillian'},
+          {key: 'Jimmy'},
+          {key: 'Julie'},
+          {key: 'Trixy'},
+          {key: 'Misty'},
+          {key: 'James'},
+          {key: 'Joel'},
+          {key: 'John'},
+          {key: 'Jillian'},
+          {key: 'Jimmy'},
+          {key: 'Julie'},
+          {key: 'Trixy'},
+          {key: 'Misty'},
+          {key: 'James'},
+          {key: 'Joel'},
+          {key: 'John'},
+          {key: 'Jillian'},
+          {key: 'Jimmy'},
+          {key: 'Julie'},
+          {key: 'Trixy'},
+          {key: 'Misty'},
+          {key: 'James'},
+          {key: 'Joel'},
+          {key: 'John'},
+          {key: 'Jillian'},
+          {key: 'Jimmy'},
+          {key: 'Julie'}
+        ]} renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+      />
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 22
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
+  },
+})
+
+
+
+// export default class IScrollerDownAndWhatHappenedNextShockedMe extends Component {
+//   render() {
+//     let pic = {
+//       uri: 'http://natureandnutrition.com/wp-content/uploads/2015/04/Health-Benefits-of-Bananas-600x600.jpg'
+//     };
+//     let pic2 = {
+//       uri: 'https://www.peta.org/wp-content/uploads/2015/09/Macaca_nigra_self-portrait-768x1063.jpg'
+//     };
+//     return (
+//       <ScrollView>
+//         <Text style={{fontSize:96}}>Scroll me plz</Text>
+//         <Image source={pic} style={{width: 193, height: 150}}/>
+//         <Text style={{fontSize: 96}}>If you like</Text>
+//         <Text style={{fontSize: 96}}>Scrolling down</Text>
+//         <Text style={{fontSize:96}}>What's the best</Text>
+//         <Text style={{fontSize:96}}>Framework around?</Text>
+//         <Image source={pic2} style={{width: 193, height: 150}} />
+//         <Text style={{fontSize:80}}>React Native</Text>
+//       </ScrollView>
+//     );
+//   }
+// }
 
 // export default class Touchables extends Component {
 //   _onPressButton() {
